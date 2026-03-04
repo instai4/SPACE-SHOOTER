@@ -4,7 +4,7 @@ An enhanced space shooter arcade game built with HTML5 Canvas and JavaScript. De
 
 ## 🎮 Play Online
 
-You can play the game directly in your browser: [Stellar Defense Demo](#) 
+You can play the game directly in your browser: [Stellar Defense Demo](https://instai4.github.io/SPACE-SHOOTER/) 
 
 ## 📖 Description
 
