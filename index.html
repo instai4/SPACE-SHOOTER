@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Stellar Defense - Enhanced Space Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- wrapper to control layout: game then footer -->
+    <div class="game-page-wrapper">
+        <div id="gameContainer">
+            <!-- Loading Screen -->
+            <div id="loadingScreen">
+                <div class="logo">STELLAR DEFENSE</div>
+                <div class="loading-bar">
+                    <div class="loading-progress" id="loadingProgress"></div>
+                </div>
+                <div id="loadingText" style="margin-bottom: 2rem; opacity: 0.7; text-align:center;">Initializing Systems...</div>
+                <button class="start-button" id="startButton">LAUNCH MISSION</button>
+            </div>
+
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- HUD -->
+            <div class="hud" id="gameHUD" style="display: none;">
+                <div>SCORE: <span id="score">0</span></div>
+                <div>HULL: <span id="health">100</span>%</div>
+                <div>SHIELD: <span id="shield">0</span>%</div>
+                <div>WAVE: <span id="wave">1</span></div>
+                <div>KILLS: <span id="kills">0</span></div>
+            </div>
+
+            <!-- Combo Display -->
+            <div class="combo-display" id="comboDisplay">
+                COMBO: <span id="combo">0</span>x<br>
+                <span style="font-size: 14px;">MULTIPLIER: <span id="multiplier">1.0</span>x</span>
+            </div>
+
+            <!-- Mobile Controls -->
+            <div class="mobile-controls" id="mobileControls">
+                <div class="joystick-container" id="joystickContainer">
+                    <div class="joystick-base">
+                        <div class="joystick-knob" id="joystickKnob"></div>
+                    </div>
+                </div>
+                <div class="fire-button" id="fireButton">FIRE</div>
+            </div>
+
+            <!-- Pause Screen -->
+            <div class="pause-screen" id="pauseScreen">
+                <h2>PAUSED</h2>
+                <p style="margin-top: 20px; opacity: 0.8;">Press P to resume</p>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div class="game-over" id="gameOver">
+                <h2>MISSION FAILED</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Enemies Destroyed: <span id="finalKills">0</span></p>
+                <p>Waves Survived: <span id="finalWaves">0</span></p>
+                <p>Max Combo: <span id="maxCombo">0</span>x</p>
+                <p style="margin-top: 20px; opacity: 0.8;">Press R to restart</p>
+            </div>
+
+            <!-- Desktop Controls Info -->
+            <div class="controls" id="desktopControls">
+                <div>WASD / Arrow Keys: Navigate</div>
+                <div>Mouse Click / SPACE: Fire</div>
+                <div>P: Pause Game</div>
+            </div>
+        </div> <!-- end gameContainer -->
+    </div> <!-- end game-page-wrapper -->
+
+    <!-- FOOTER (now clearly below the game) -->
+    <footer>
+        <div class="footer-content">
+            <p class="creator">Created by <a href="https://instai4.github.io/PORT-FOLIO/" target="_blank" class="creator-name">Anurag</a></p>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/inst.ai.4?igsh=MWNqaG15OWQ2MGczMA==" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1DMBwCvzDL/" target="_blank" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/anurag-singh-43230a380/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/instai4" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <p class="copyright">&copy; 2026 Stellar Defense — Space Shooter</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
